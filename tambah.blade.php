@@ -69,7 +69,7 @@
       <nav class="mt-1">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="{{url ('pegawai/master')}}" class="nav-link">
               <i class="nav-icon fa fa-th-large"></i>
               <p>
                 Dashboard
@@ -78,7 +78,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="{{url ('pegawai/index')}}" class="nav-link">
               <i class="nav-icon fa fa-suitcase"></i>
               <p>
                 Kinerja Pegawai
@@ -104,7 +104,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="{{url ('pegawai/settings')}}" class="nav-link">
               <i class="nav-icon fa fa-cog"></i>
               <p>
                 Settings
@@ -154,9 +154,9 @@
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Masukkan hasil kinerja"></textarea>
                 </div>
             </div>
-            <div class="col-lg-3">
-                <label for="formFile" class="form-label">Bukti</label>
-                <input class="form-control" type="file" id="formFile">
+            <div class="form-group">
+                <label>Bukti</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
             </div>
             <br>
             <div class="box-header text-right">
