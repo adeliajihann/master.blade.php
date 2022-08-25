@@ -69,7 +69,7 @@
       <nav class="mt-1">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="{{url ('pegawai/master')}}" class="nav-link">
               <i class="nav-icon fa fa-th-large"></i>
               <p>
                 Dashboard
@@ -78,7 +78,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="{{url ('pegawai/index')}}" class="nav-link">
               <i class="nav-icon fa fa-suitcase"></i>
               <p>
                 Kinerja Pegawai
@@ -104,7 +104,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="{{url ('pegawai/settings')}}" class="nav-link">
               <i class="nav-icon fa fa-cog"></i>
               <p>
                 Settings
