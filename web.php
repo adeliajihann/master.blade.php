@@ -14,20 +14,51 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layouts.p_kinerja',[
-        "title"=>"SPINER | Pegawai"
+    return view('pegawai.p_dashboard',[
+        "title"=>"SPINER | Dashboard Pegawai"
     ]);
 });
 
-Route::get('/tambah_kinerja_pegawai', function () {
-    return view('layouts.p_tambah_kinerja',[
-        "title"=>"SPINER | Tambah Pegawai"
+Route::get('/pegawai/kinerja-pegawai', function () {
+    return view('pegawai.p_kinerja',[
+        "title"=>"SPINER | Kinerja Pegawai"
     ]);
 });
 
-Route::get('/laporan_pegawai', function () {
-    return view('layouts.p_laporan',[
-        "title"=>"SPINER | Laporan Pegawai"
+Route::get('/pegawai/tambah-kinerja-pegawai', function () {
+    return view('pegawai.p_tambah_kinerja',[
+        "title"=>"SPINER | Tambah Kinerja"
     ]);
 });
+
+Route::get('/pegawai/edit-kinerja-pegawai', function () {
+    return view('pegawai.p_edit_kinerja',[
+        "title"=>"SPINER | Edit Kinerja"
+    ]);
+});
+
+Route::get('/pegawai/laporan-terverifikasi', function () {
+    return view('pegawai.p_laporan',[
+        "title"=>"SPINER | Laporan Terverifikasi"
+    ]);
+});
+
+Route::get('/pegawai/pengaturan', function () {
+    return view('pegawai.p_pengaturan',[
+        "title"=>"SPINER |  Pengaturan Pegawai"
+    ]);
+});
+
+Route::get('/pegawai/edit-profil', function () {
+    return view('pegawai.p_edit_profil',[
+        "title"=>"SPINER |  Edit Profil Pegawai"
+    ]);
+});
+
+Route::get('/pegawai/edit-password', function () {
+    return view('pegawai.p_edit_password',[
+        "title"=>"SPINER |  Edit Password Pegawai"
+    ]);
+});
+
 
