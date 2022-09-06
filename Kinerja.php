@@ -9,4 +9,20 @@ class Kinerja extends Model
 {
     use HasFactory;
     protected $table='kinerja';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+            // 'kd_dinas',
+            // 'bidang',
+            // 'nip',
+            // 'waktu',
+            'hasil',
+            'bukti',
+            // 'status',
+            'tgl'
+    ];
 }
