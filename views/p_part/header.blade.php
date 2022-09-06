@@ -12,7 +12,7 @@
   <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">
     <li class="nav-item">
-      <a class="nav-link" href="#" role="button" class="fa-solid fa-arrow-right-from-bracket">Logout</a>
+      <a class="nav-link" href="#" role="button" class="fa-solid fa-arrow-right-from-bracket">Keluar</a>
     </li>
   </ul>
 </nav>

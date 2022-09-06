@@ -7,7 +7,7 @@
   <div class="container-fluid">
     <div class="row mb-0">
       <div class="col-sm-12">
-        <h1 class="font-weight-bold">Edit Password</h1>
+        <h1 class="font-weight-bold">Ubah Password</h1>
         <span>Amankan akun Anda dengan kombinasi password yang baik</span>
       </div><!-- /.col -->
     </div><!-- /.row -->
@@ -23,16 +23,16 @@
         <form>
             <div class="form-group">
                 <div class="col-lg-15">
-                    <label for="exampleFormControlInput1">New Password</label>
-                    <input type="nama" class="form-control" id="exampleFormControlInput1" placeholder="New Password ..">
+                    <label for="exampleFormControlInput1">Password baru</label>
+                    <input type="nama" class="form-control" id="exampleFormControlInput1" placeholder="Password baru ..">
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-lg-15">
-                    <label for="exampleFormControlInput1">New Password</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Repeat New Password ..">
+                    <label for="exampleFormControlInput1">Password baru</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ulangi Password baru ..">
                 </div><br>
-                <button type="button" class="btn btn-primary">Update Now</button>
+                <button type="button" class="btn btn-primary">Perbarui</button>
             </div>
         </form>
     </div>

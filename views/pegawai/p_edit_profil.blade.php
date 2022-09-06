@@ -6,7 +6,7 @@
    <div class="container-fluid">
     <div class="col-sm-12">
       <div class="row mb-0">
-        <h1 class="font-weight-bold">Edit Profile</h1>
+        <h1 class="font-weight-bold">Ubah Profil</h1>
       </div><!-- /.col -->
     </div><!-- /.row -->
    </div><!-- /.container-fluid -->

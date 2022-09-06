@@ -5,7 +5,7 @@
     <div class="content-header">
       <div class="container-fluid">
         <div class="col-sm-11">
-            <h1 class="md-0">Data Kinerja Pegawai</h1><br>
+            <h1 class="md-0">Laporan Data Kinerja Pegawai</h1><br>
             <form>
                         <div class="form-row">
                             <div class="form-group col-md-2">

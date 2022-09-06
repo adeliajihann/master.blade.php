@@ -6,7 +6,7 @@
     <div class="container-fluid">
       <div class="col-sm-12">
         <div class="row mb-0">
-          <h1 class="md-0">Edit Data Kinerja Pegawai</h1>
+          <h1 class="md-0">Ubah Data Kinerja Pegawai</h1>
         </div><!-- /.col -->
       </div><!-- /.row -->
     </div>

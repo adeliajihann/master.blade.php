@@ -52,12 +52,13 @@
                 <th style="text-align:center">Aksi</th>
             </thead>
             <tbody>
+              @foreach ($kinerja as $k)
             <tr class="odd">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="text-center">{{$k->id}}</td>
+                <td class="text-center">{{$k->tgl}}</td>
+                <td class="text-center">{{$k->hasil}}</td>
+                <td class="text-center">{{$k->bukti}}</td>
+                <td class="text-center">{{$k->status}}</td>
                 <td>
                 <div class="d-grid gap-2 d-md-block" style="text-align:center">
                   <a href="{{url('/pegawai/edit-kinerja-pegawai')}}" class="btn btn-warning"><i class="fas fa-edit"></i></a>
@@ -65,19 +66,7 @@
                 </div>
               </td>
             </tr>
-            <tr class="even">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <td>
-                <div class="d-grid gap-2 d-md-block" style="text-align:center">
-                  <a href="{{url('/pegawai/edit-kinerja-pegawai')}}" class="btn btn-warning"><i class="fas fa-edit"></i></a>
-                    <button class="btn btn-danger" type="button"><i class="fa fa-trash"></i></button>
-                </div>
-              </td>
-            </tr>
+            @endforeach
             </tbody>
           </table>
         </div>

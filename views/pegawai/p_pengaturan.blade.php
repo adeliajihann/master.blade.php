@@ -23,10 +23,10 @@
                 <div class="info-box bg-light">
                     <div class="info-box-content">
                         <span class="box-icon"><br><i class="fa-5x fas fa-user-edit"></i></span>
-                        <span class="info-box-number">My Profile</span>
+                        <span class="info-box-number">Profil Saya</span>
                         <span class="info-box-text">Ubah data diri kamu</span><br>
                         <a href="{{url ('/pegawai/edit-profil')}}" class="nav-link" style="text-align: center"> 
-                          <button type="button" class="btn btn-warning rounded-pill">Edit now</button>
+                          <button type="button" class="btn btn-warning rounded-pill">Ubah sekarang</button>
                         </a>
                     </div>
                 </div><br>
@@ -36,10 +36,10 @@
                 <div class="info-box bg-light">
                     <div class="info-box-content">
                         <span class="box-icon"><br><i class="fa-5x fas fa-lock"></i></span>
-                        <span class="info-box-number">My Password</span>
+                        <span class="info-box-number">Password Saya</span>
                         <span class="info-box-text">Ganti kata sandimu</span><br>
                         <a href="{{url ('/pegawai/edit-password')}}" class="nav-link" style="text-align: center"> 
-                          <button type="button" class="btn btn-warning rounded-pill">Change now</button>
+                          <button type="button" class="btn btn-warning rounded-pill">Ubah sekarang</button>
                         </a>
                     </div>
                 </div>
