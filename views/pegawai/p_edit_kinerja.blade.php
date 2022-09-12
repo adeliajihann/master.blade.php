@@ -16,27 +16,29 @@
 <div class="container-fluid">
   <div class="col-sm-12">
 <div class="card">
-              <form method="post">
+              <form action="/kinerja-pegawai/{{ $kinerja->id }}" method="post">
                 <div class="card-body">
+                  @method('put')
                   @csrf
                   <div class="form-group col-md-2">
-                    <label for="exampleInputTanggal">Tanggal</label>
-                    <input type="date" class="form-control" id="tgl" disabled>
+                    <label for="tgl">Tanggal</label>
+                    <input type="date" class="form-control" name="tgl" id="tgl" value="{{ $kinerja->tgl }}">
                   </div>
                   <div class="form-group col-md-5">
-                    <label for="exampleInputHasilKinerja">Hasil Kinerja</label>
-                    <textarea class="form-control" id="exampleInputHasilKinerja" rows="4" placeholder="Masukkan Hasil Kinerja"></textarea>
+                    <label for="hasil">Hasil Kinerja</label>
+                    <textarea class="form-control" id="hasil" name="hasil" rows="4" value="{{ $kinerja->hasil }}"></textarea>
                   </div>
                   <div class="form-group col-md-5">
-                    <label for="exampleInputFile">Bukti</label>
+                  {{-- <img src="{{ template(img) }}" height="128"> --}}
+                    <label for="foto">Bukti Foto</label>
                     <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Pilih file</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
-                      </div>
+                      <input type="file" class="form-control" id="foto" name="foto" value="{{ $kinerja->foto }}">
+                    </div>
+                  </div>
+                  <div class="form-group col-md-5">
+                    <label for="doc">Bukti Document (.pdf)</label>
+                    <div class="input-group">
+                      <input type="file" class="form-control" id="doc" name="doc" value="{{ $kinerja->doc }}">
                     </div>
                   </div>
                 </div>
