@@ -7,9 +7,12 @@ use Illuminate\Http\Request;
 
 class kinerjaController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $kinerja=Kinerja::all();
+        $keyword = $request->keyword;
+        $kinerja = Kinerja::where('hasil','LIKE', '%'.$keyword.'%')
+        ->orWhere('hasil','LIKE', '%'.$keyword.'%')
+        ->paginate(2);
         return view('pegawai.p_kinerja',compact('kinerja'));
     }
 
@@ -20,12 +23,42 @@ class kinerjaController extends Controller
 
     public function store(Request $request)
     {
+        $foto = $request->file('foto');
+        $newFoto = 'foto_kinerja' . '_' . time() . '.' . $foto->extension();
+
+        $doc = $request->file('doc');
+        $newDoc = 'doc_kinerja' . '_' . time() . '.' . $doc->extension();
+
+        $path = 'template/dist/img/kinerja/';
+        $request->foto->move(public_path($path), $newFoto);
+        $request->doc->move(public_path($path), $newDoc);
         Kinerja::create([
+            // $( "#tgl" ).datepicker({  minDate: new Date() })
             'tgl' => $request->tgl,
-            'hasil' => $request->hasil
-            // 'hasil' => $request->hasil,
+            'hasil' => $request->hasil,
+            'foto' => $newFoto,
+            'doc' => $newDoc,
         ]);
-        // kinerja::tambah($request->except(['submit']));
+        // $message="Berhasil Simpan Data";
+        return redirect('/pegawai/kinerja-pegawai');
+    }
+
+    public function destroy($id)
+    {
+        $kinerja = Kinerja::where('id', $id)->delete();
+        return redirect('/pegawai/kinerja-pegawai')->with('status','Data berhasil di hapus!');
+    }
+
+    public function edit($id)
+    {
+        $kinerja = Kinerja::find($id);
+        return view('pegawai.p_edit_kinerja',compact(['kinerja']));
+    }
+
+    public function update($id, Request $request)
+    {
+        $kinerja = Kinerja::find($id);
+        $kinerja->update();
         return redirect('/pegawai/kinerja-pegawai');
     }
 }
