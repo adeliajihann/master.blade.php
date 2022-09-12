@@ -32,9 +32,18 @@ Route::get('/pegawai/dashboard', function () {
     ]);
 });
 
-Route::get('/pegawai/kinerja-pegawai',[KinerjaController::class,'index'],
+Route::get('/pegawai/kinerja-pegawai',[KinerjaController::class,'index'], 
     ["title"=>"SPINER | Kinerja Pegawai"]
 );
+
+Route::post('/pegawai/kinerja-pegawai',[KinerjaController::class,'index','store'], 
+    ["title"=>"SPINER | Kinerja Pegawai"]
+);
+
+Route::post('/pegawai/store',[KinerjaController::class,'store']);
+Route::get('pegawai/hapus/{id}', [KinerjaController::class, 'destroy'])->name('destroy');
+Route::get('/edit-kinerja-pegawai/{id}', [KinerjaController::class, 'edit']);
+Route::put('/kinerja-pegawai/{id}', [KinerjaController::class, 'update']);
 
 Route::get('/pegawai/tambah-kinerja-pegawai', function () 
 {
@@ -93,8 +102,3 @@ Route::get('/layouts/p_editpassword', function () {
         "title"=>"SPINER | Ubah Password"
     ]);
 });
-
-// Route::get('/pegawai/p_kinerja',[KinerjaController::class,'index']);
-// // Route::get('/pegawai/p_kinerja',[KinerjaController::class,'p_kinerja']);
-// Route::post('/pegawai/p_tambah_kinerja',[KinerjaController::class,'create']);
-// Route::post('/pegawai/p_kinerja',[KinerjaController::class,'store']);
