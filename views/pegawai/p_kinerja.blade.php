@@ -8,7 +8,7 @@
         <div class="row mb-4">
             <h1 class="md-0">Data Kinerja Pegawai</h1>
             <div class="col box-header text-right">
-                <a href="{{url('/pegawai/tambah-kinerja-pegawai')}}" class="btn btn-primary"><i class="fa fa-plus-circle" ></i &nbsp> Tambah Kinerja</a>
+                <a href="{{url('/pegawai/tambah-kinerja-pegawai')}}" class="btn btn-rounded btn-primary" style="border-radius:30px;"><i class="fa fa-plus-circle" ></i &nbsp> Tambah Kinerja</a>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -17,22 +17,19 @@
 <div class="container-fluid">
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Show
-              <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown link
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">1</a></li>
-                  <li><a class="dropdown-item" href="#">2</a></li>
-                  <li><a class="dropdown-item" href="#">3</a></li>
-                </ul>
-              </div>Entries</h3>
+          <div class="card-title">Show 
+            <select name="#" aria-controls="#" class="custom-select custom-select-sm form-control form-control-sm" style="width: 70px">
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="50">50</option>
+            </select> entries</div>
             <div class="card-tools" style="padding-top: 10px;">
+              <form action="" method="get">
                 <h3 class="card-title">Search: </h3>
-                <div class="input-group input-group-sm" style="width: 200px; padding-left:20px;"">
-                    <input type="text" name="table_search" class="form-control" style="padding-left:20px;"">
+                <div class="input-group input-group-sm" style="width: 200px; padding-left:20px;">
+                    <input type="text" name="keyword" class="form-control" style="padding-left:20px;">
                 </div>
+              </form>
             </div>
         </div>
         <!-- /.card-header -->
@@ -46,23 +43,26 @@
             <thead>
                 <th style="text-align:center">No</th>
                 <th style="text-align:center">Tgl</th>
-                <th style="text-align:center">Hasil</th>
-                <th style="text-align:center">Bukti</th>
-                <th style="text-align:center">Status</th>
+                <th style="text-align:center">Hasil Kinerja</th>
+                <th style="text-align:center">Foto</th>
+                <th style="text-align:center">PDF</th>
                 <th style="text-align:center">Aksi</th>
             </thead>
             <tbody>
-              @foreach ($kinerja as $k)
+            @php $no = 1; @endphp
+            @foreach ($kinerja as $k)
             <tr class="odd">
-                <td class="text-center">{{$k->id}}</td>
+                <td class="text-center">{{$no++}}</td>
                 <td class="text-center">{{$k->tgl}}</td>
                 <td class="text-center">{{$k->hasil}}</td>
-                <td class="text-center">{{$k->bukti}}</td>
-                <td class="text-center">{{$k->status}}</td>
+                <td class="text-center"><a href="{{ asset('template/dist/img/kinerja/'.$k['foto']) }}" class="btn btn-rounded btn-info" style="border-radius:30px;"><i class="far fa-file-image"></i></a></td>
+                <td class="text-center"><a href="{{ asset('template/dist/img/kinerja/'.$k['doc']) }}" class="btn btn-rounded btn-info" style="border-radius:30px;"><i class="far fa-file-pdf"></i></a></td>
+                {{-- <td class="text-center"><img src="{{ asset ('template/dist/img/kinerja/'.$k['foto']) }}" height="100"></td> --}}
+                {{-- <td class="text-center"><iframe src="{{ asset ('template/dist/img/kinerja/'.$k['doc']) }}" text-align="top" height="300" width="100%" frameborder="0" scrolling="auto"></iframe></td> --}}
                 <td>
                 <div class="d-grid gap-2 d-md-block" style="text-align:center">
-                  <a href="{{url('/pegawai/edit-kinerja-pegawai')}}" class="btn btn-warning"><i class="fas fa-edit"></i></a>
-                    <button class="btn btn-danger" type="button"><i class="fa fa-trash"></i></button>
+                  <a href="/edit-kinerja-pegawai/{{ $k->id }}" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                  <a href="/pegawai/hapus/{{ $k->id }}" class="btn btn-danger"><i class="fas fa-trash" onclick="return confirm('Yakin hapus data?')"></i></a>
                 </div>
               </td>
             </tr>
