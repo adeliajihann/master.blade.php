@@ -15,13 +15,15 @@ class Kinerja extends Model
      *
      * @var array<int, string>
      */
+    protected $primaryKey = 'id';
     protected $fillable = [
             // 'kd_dinas',
             // 'bidang',
             // 'nip',
             // 'waktu',
             'hasil',
-            'bukti',
+            'foto',
+            'doc',
             // 'status',
             'tgl'
     ];
