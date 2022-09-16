@@ -22,20 +22,22 @@
               <option value="5">5</option>
               <option value="10">10</option>
               <option value="50">50</option>
-            </select> entries</div>
-            <div class="card-tools" style="padding-top: 10px;">
+            </select> entries
+          </div>
+          <div class="card-tools" style="padding-top: 10px;">
               <form action="" method="get">
                 <h3 class="card-title">Search: </h3>
                 <div class="input-group input-group-sm" style="width: 200px; padding-left:20px;">
                     <input type="text" name="keyword" class="form-control" style="padding-left:20px;">
                 </div>
               </form>
-            </div>
+          </div>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
           <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
-            <div class="row"><div class="col-sm-12 col-md-6"></div>
+            <div class="row">
+              <div class="col-sm-12 col-md-6"></div>
             <div class="col-sm-12 col-md-6"></div>
           </div><div class="row">
             <div class="col-sm-12">
@@ -55,10 +57,8 @@
                 <td class="text-center">{{$no++}}</td>
                 <td class="text-center">{{$k->tgl}}</td>
                 <td class="text-center">{{$k->hasil}}</td>
-                <td class="text-center"><a href="{{ asset('template/dist/img/kinerja/'.$k['foto']) }}" class="btn btn-rounded btn-info" style="border-radius:30px;"><i class="far fa-file-image"></i></a></td>
-                <td class="text-center"><a href="{{ asset('template/dist/img/kinerja/'.$k['doc']) }}" class="btn btn-rounded btn-info" style="border-radius:30px;"><i class="far fa-file-pdf"></i></a></td>
-                {{-- <td class="text-center"><img src="{{ asset ('template/dist/img/kinerja/'.$k['foto']) }}" height="100"></td> --}}
-                {{-- <td class="text-center"><iframe src="{{ asset ('template/dist/img/kinerja/'.$k['doc']) }}" text-align="top" height="300" width="100%" frameborder="0" scrolling="auto"></iframe></td> --}}
+                <td class="text-center"><a href="{{ asset('template/dist/img/kinerja/'.$k['foto']) }}" class="btn btn-rounded btn-info"><i class="far fa-file-image"></i></a></td>
+                <td class="text-center"><a href="{{ asset('template/dist/img/kinerja/'.$k['doc']) }}" class="btn btn-rounded btn-info"><i class="far fa-file-pdf"></i></a></td>
                 <td>
                 <div class="d-grid gap-2 d-md-block" style="text-align:center">
                   <a href="/edit-kinerja-pegawai/{{ $k->id }}" class="btn btn-warning"><i class="fas fa-edit"></i></a>
