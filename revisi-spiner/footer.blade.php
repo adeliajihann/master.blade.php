@@ -25,6 +25,3 @@
 <script src="{{asset('template')}}/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
 
 <script src="{{asset('template')}}/dist/js/adminlte.min.js"></script>
-
-
-
