@@ -16,14 +16,7 @@
     <!-- /.content-header -->
 <div class="container-fluid">
     <div class="card">
-        <!-- /.card-header -->
-        <div class="card-header">
-          <div class="row">
-            <div class="col-sm-12">
-              Table Data Pegawai
-            </div>
-          </div>
-        </div>
+        
         <div class="card-body">
           <div class="row">
             <div class="col-sm-12">
@@ -71,5 +64,3 @@
     $('#tb_kinerja').dataTable();
   </script>
 @endpush
-      
-     
